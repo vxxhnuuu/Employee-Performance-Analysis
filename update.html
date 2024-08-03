@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="submit"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Data</h1>
+        <form action="/update_data" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age">
+
+            <label for="business_travel">Business Travel:</label>
+            <select id="business_travel" name="business_travel">
+                <option value="0">Non-Travel</option>
+                <option value="1">Frequently Travel</option>
+                <option value="2">Travel Rarely</option>
+            </select>
+
+            <label for="daily_rate">Daily Rate:</label>
+            <input type="text" id="daily_rate" name="daily_rate">
+
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="0">Human Resource</option>
+                <option value="1">Research and Development</option>
+                <option value="2">Sales</option>
+            </select>
+
+            <label for="distance_from_home">Distance from Home:</label>
+            <input type="text" id="distance_from_home" name="distance_from_home">
+
+            <label for="education">Education:</label>
+            <select id="education" name="education">
+                <option value="1">Below College</option>
+                <option value="2">College</option>
+                <option value="3">Bachelor</option>
+                <option value="4">Master</option>
+                <option value="5">Doctor</option>
+            </select>
+
+            <label for="education_field">Education Field:</label>
+            <select id="education_field" name="education_field">
+                <option value="0">Human Resources</option>
+                <option value="1">Life Sciences</option>
+                <option value="2">Marketing</option>
+                <option value="3">Medical</option>
+                <option value="4">Other</option>
+                <option value="5">Technical Degree</option>
+            </select>
+
+            <label for="environment_satisfaction">Environmental Satisfaction:</label>
+            <select id="environment_satisfaction" name="environment_satisfaction">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">Very High</option>
+            </select>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label for="hourly_rate">Hourly Rate:</label>
+            <input type="text" id="hourly_rate" name="hourly_rate">
+
+            <label for="job_involvement">Job Involvement:</label>
+            <select id="job_involvement" name="job_involvement">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">Very High</option>
+            </select>
+
+            <label for="job_level">Job Level:</label>
+            <input type="text" id="job_level" name="job_level">
+
+            <label for="job_role">Job Role:</label>
+            <select id="job_role" name="job_role">
+                <option value="0">Healthcare Representative</option>
+                <option value="1">Human Resource</option>
+                <option value="2">Laboratory Technician</option>
+                <option value="3">Manager</option>
+                <option value="4">Manufacturing Director</option>
+                <option value="5">Research Director</option>
+                <option value="6">Research Scientist</option>
+                <option value="7">Sales Executive</option>
+                <option value="8">Sales Representative</option>
+            </select>
+
+            <label for="job_satisfaction">Job Satisfaction:</label>
+            <select id="job_satisfaction" name="job_satisfaction">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">Very High</option>
+            </select>
+
+            <label for="marital_status">Marital Status:</label>
+            <select id="marital_status" name="marital_status">
+                <option value="0">Divorce</option>
+                <option value="1">Married</option>
+                <option value="2">Single</option>
+            </select>
+
+            <label for="monthly_rate">Monthly Rate:</label>
+            <input type="text" id="monthly_rate" name="monthly_rate">
+
+            <label for="num_companies_worked">Number of Companies Worked:</label>
+            <input type="text" id="num_companies_worked" name="num_companies_worked">
+
+            <label for="overtime">Overtime:</label>
+            <select id="overtime" name="overtime">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="percentage_salary_hike">Percentage of Salary Hike:</label>
+            <input type="text" id="percentage_salary_hike" name="percentage_salary_hike">
+
+            <label for="performance_rating">Performance Rating:</label>
+            <select id="performance_rating" name="performance_rating">
+                <option value="1">Low</option>
+                <option value="2">Good</option>
+                <option value="3">Excellent</option>
+                <option value="4">Outstanding</option>
+            </select>
+
+            <label for="relationship_satisfaction">Relationship Satisfaction:</label>
+            <select id="relationship_satisfaction" name="relationship_satisfaction">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">Very High</option>
+            </select>
+
+            <label for="stock_option_level">Stock Option Level:</label>
+            <input type="text" id="stock_option_level" name="stock_option_level">
+
+            <label for="total_working_years">Total Working Years:</label>
+            <input type="text" id="total_working_years" name="total_working_years">
+
+            <label for="training_times_last_year">Training Times Last Year:</label>
+            <input type="text" id="training_times_last_year" name="training_times_last_year">
+
+            <label for="worklife_balance">Work Life Balance:</label>
+            <select id="worklife_balance" name="worklife_balance">
+                <option value="1">Bad</option>
+                <option value="2">Good</option>
+                <option value="3">Better</option>
+                <option value="4">Best</option>
+            </select>
+
+            <label for="years_at_company">Years at Company:</label>
+            <input type="text" id="years_at_company" name="years_at_company">
+
+            <label for="years_in_currentrole">Years in Current Role:</label>
+            <input type="text" id="years_in_currentrole" name="years_in_currentrole">
+
+            <label for="years_since_last_promotion">Years Since Last Promotion:</label>
+            <input type="text" id="years_since_last_promotion" name="years_since_last_promotion">
+
+            <label for="years_with_current_manager">Years with Current Manager:</label>
+            <input type="text" id="years_with_current_manager" name="years_with_current_manager">
+
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
